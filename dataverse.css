@@ -1266,3 +1266,147 @@ gap: 16px;
     .community-grid { grid-template-columns: repeat(3, 1fr); }
     .contact-inner { grid-template-columns: 1.2fr 1fr; }
 }
+
+.icon-xs { width: 14px; height: 14px; }
+.icon-md { width: 24px; height: 24px; }
+
+/* Layout Container Setup */
+.contact {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Two-Column Split Layout Grid */
+.contact-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* Form Styles & Field Grid */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--navy, #1e293b);
+}
+
+/* Inputs & Textarea Styling */
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    background-color: #fafafa;
+    color: var(--slate, #64748b);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #B57EDC;
+    background-color: #ffffff;
+}
+
+/* Contact Info Column Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.heading-md {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy, #1e293b);
+}
+
+.contact-info p {
+    color: var(--slate, #64748b);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Rows for Details (Icons & Text Alignments) */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-row img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.contact-row a {
+    color: #B57EDC;
+    text-decoration: none;
+}
+
+.contact-row a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons Layout */
+.socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.socials a img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+}
+
+.socials a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
